@@ -1,104 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-image: url("bck.jpg"); /* Corrected syntax for background image */
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-position: center; /* Centers the background image */
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    margin: 0; /* Changed to 0 to remove default margin */
-    background-color: #f4f4f4; /* Fallback color */
+    justify-content: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
 }
 
-.card {
-    background-color: white;
+header {
+    background-color: #007BFF;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: absolute; /* Position header at the top */
+    top: 0; /* Align to the top */
+}
+
+.container {
+    background: white;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 40px; /* Adjusted padding for better layout */
-    width: 700px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 600px; /* Set a fixed width for the container */
 }
 
-.title-box {
-    margin-bottom: 20px;
+form {
+    margin: 10px 0;
+    display: flex; /* Use flexbox for the form */
 }
 
-.search-bar {
-    margin-bottom: 10px;
-}
-
-.search-bar input {
+input[type="text"] {
     padding: 10px;
-    width: calc(85% - 22px); /* Adjust width to account for padding and border */
+    margin: 5px;
+    flex: 1; /* Allow the input to grow and fill available space */
+}
+
+input[type="submit"] {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px; /* Add some space between the input and button */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#recommendations {
+    margin-top: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-bar button {
     padding: 10px;
-    border: none;
     border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-}
-
-.search-bar button:hover {
-    background-color: #0056b3;
-}
-
-.content {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px; 
-}
-
-.sub-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.image-box img {
-    width: 50%;
-    height: auto; 
-    border-radius: 8px;
-}
-
-.image-left {
-    float: left;
-    margin: 10px;
-}
-
-.slot-counter {
-    float: left;
-    margin-top: 10px;
-}
-
-.description-box {
-    margin-left: 20px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: auto; 
-}
-
-.register-option {
-    margin-top: auto; /* Pushes the button to the bottom */
-}
-
-button {
-    padding: 10px 50px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
+    background-color: #f9f9f9;
+    text-align: left; /* Align text to the left */
 }
